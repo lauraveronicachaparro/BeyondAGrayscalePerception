@@ -13,9 +13,9 @@ In order to run the file, you can add an argument --mode with 3 different config
 | Model | Route |
 |----------|----------|
 | Baseline   |  /home/lvchaparro/AML/PROYECTO/NEWCOLOR/CODIGO FINAL/models/Baseline/modeloBaseline.pt   | 
-| Gamma    | Cell 5   | 
+| Gamma    | /home/lvchaparro/AML/PROYECTO/NEWCOLOR/CODIGO FINAL/models/gamma/betagammag.pt   | 
 | Gamma (PL)    | Cell 8   | 
-| Beta    | Cell 5   | 
+| Beta    | /home/lvchaparro/AML/PROYECTO/NEWCOLOR/CODIGO FINAL/models/beta/betagammab.pt   | 
 | Beta (PL)    | Cell 8   | 
 
 
