@@ -24,7 +24,7 @@ parser = argparse.ArgumentParser(description='PyTorch Deeplab v3 Example')
 parser.add_argument('--input-path', type=str, help='Path to folder of training images', default='imgs/train/mycoco_train2017/')
 parser.add_argument('--no-cuda', action='store_true', default=False, help='disables CUDA training')
 parser.add_argument('--batch-size', type=int, help='batch size per GPU', default=16)  # Adjusted batch size
-parser.add_argument('--epochs', type=int, help='number of epochs', default=2)
+parser.add_argument('--epochs', type=int, help='number of epochs', default=5)
 parser.add_argument('--seed', type=int, default=1, metavar='S', help='random seed (default: 1)')
 
 args = parser.parse_args()

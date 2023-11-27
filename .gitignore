@@ -1,0 +1,5 @@
+Data/train2017/*
+Data/val2017/*
+Data/train2017.zip
+Data/val2017.zip
+Data_mini/*

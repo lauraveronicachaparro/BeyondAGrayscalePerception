@@ -10,7 +10,7 @@ import numpy as np
 import os.path as osp
 from PIL import Image
 import pandas as pd
-from DataloaderBaseline import COCODataset
+from Data import COCODataset
 from torch.utils.data import DataLoader
 import torch
 import torch.nn as nn
@@ -60,10 +60,10 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 # Data loaders
 ###################################################################################################
 
-root_dir = 'Dataminis'  # Change this based on the server you are using
+root_dir = '../Data_mini'  # Change this based on the server you are using
 
-dir_model = './models/Baseline'
-dir_images = './images/Baseline'
+dir_model = 'models/'
+dir_images = 'images/'
 if not os.path.exists(dir_model):
     os.mkdir(dir_model)
 if not os.path.exists(dir_images):

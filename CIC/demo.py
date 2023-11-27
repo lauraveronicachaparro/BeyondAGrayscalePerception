@@ -6,10 +6,9 @@ from colorizers import *
 import math 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-i', '--img_path', type=str, default='images/mycoco_val2017/000000002532.jpg')
+parser.add_argument('-i', '--img_path', type=str, default='imgs/000000012120.jpg')
 parser.add_argument('--use_gpu', action='store_true', help='whether to use GPU')
-parser.add_argument('-o', '--save_prefix', type=str, default='saved',
-                    help='will save into this file with {eccv16.png, siggraph17.png} suffixes')
+parser.add_argument('--save_prefix', type=str, default='result')
 opt = parser.parse_args()
 
 # load colorizers
@@ -81,12 +80,12 @@ plt.title('GrayScale Input')
 plt.axis('off')
 
 plt.subplot(1, 3, 2)
-plt.imshow(out_img_eccv16)
+plt.imshow(img)
 plt.title('Original')
 plt.axis('off')
 
 plt.subplot(1, 3, 3)
-plt.imshow(img)
+plt.imshow(out_img_eccv16)
 plt.title('Predicted')
 plt.axis('off')
 plt.savefig("result_eccv16.png")
@@ -100,12 +99,12 @@ plt.title('GrayScale Input')
 plt.axis('off')
 
 plt.subplot(1, 3, 2)
-plt.imshow(out_img_siggraph17)
+plt.imshow(img)
 plt.title('Original')
 plt.axis('off')
 
 plt.subplot(1, 3, 3)
-plt.imshow(img)
+plt.imshow(out_img_siggraph17)
 plt.title('Predicted')
 plt.axis('off')
 

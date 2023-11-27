@@ -66,7 +66,7 @@ parser.add_argument('--log-interval', type=int, default=10, metavar='N',
                          'logging training status')
 parser.add_argument('--save', type=str, default='models/modeloTodo20.pt',
                     help='file on which to save model weights')
-parser.add_argument('--resume', type=str, default='BetaGamma/beta_2023-11-26_01-12-26/chkpt_10/cp-0.pth',
+parser.add_argument('--resume', type=str, default='BetaGamma/gamma_2023-11-26_03-05-37loss/chkpt_10/cp-2.pth',
                     help='file from which to resume training') #TODO: CHANGE THIS TO THE PATH OF THE MODEL YOU WANT TO USE
 parser.add_argument('--i', type=str, default='000000002532.jpg',
                     help='image to be tested')
@@ -186,13 +186,15 @@ class GammaModel(nn.Module):
     def forward(self, x, embed_input):
       return self.decoder(self.fusion(embed_input, self.encoder(x)))
 
+
 def load_model():
   """load the classifier, use eval as the classifier is not being trained during the model training"""
   inception = models.mobilenet_v2(pretrained=True)
   inception.eval()
   return inception
 
-MODEL = 'beta' # TODO: CHANGE THIS TO 'gamma' TO USE GAMMA MODEL
+
+MODEL = 'gamma' # TODO: CHANGE THIS TO 'gamma' TO USE GAMMA MODEL
 ###################################################################################################
 # Variables
 ###################################################################################################
@@ -209,13 +211,11 @@ elif MODEL == 'gamma':
   model = GammaModel()
   inception = load_model()
   inception.to(device)
+model.load_state_dict(torch.load(args.resume))
 model.to(device)
 
 optimizer = optim.Adam(params = model.parameters())
 
-with open(args.resume, 'rb') as fp:
-            state = torch.load(fp)
-            model.load_state_dict(state)
 
 model.eval()
 criterion = nn.MSELoss()
@@ -274,13 +274,14 @@ for i, image in enumerate(cubo_imagen_procesado):
     ab = ab.transpose(1,3)
     print(L.shape)
     print(ab.shape)
-    
+    im_l = image.float().unsqueeze(0).permute(0, 3, 1, 2).to(device)
+    print(im_l.shape)
     with torch.no_grad():
       if MODEL == 'beta':
         outputs = model(L) 
       elif MODEL == 'gamma':
         with torch.no_grad():
-          embed = inception(input)
+          embed = inception(im_l)
         outputs = model(L, embed)
     newL = (L+1)*50.0
     newAB = (outputs) * 128.0

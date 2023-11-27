@@ -12,7 +12,7 @@ import numpy as np
 import os.path as osp
 from PIL import Image
 import pandas as pd
-from Dataloader import COCODataset
+from Data import COCODataset
 #from utils import Evaluator
 from torch.utils.data import DataLoader
 import torch
@@ -73,7 +73,7 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 # Data loaders
 ###################################################################################################
 
-root_dir = 'Data_mini'  # Change this based on the server you are using
+root_dir = '../Data_mini'  # Change this based on the server you are using
 
 
 train_dataset = COCODataset(root_dir, dataset_type='train',

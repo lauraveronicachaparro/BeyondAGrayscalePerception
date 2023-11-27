@@ -42,7 +42,7 @@ warnings.filterwarnings("ignore")
 # DataLoader
 #############################################################################
 
-train_folder = "images/mycoco_train2017"
+train_folder = "../Data_mini/images/mycoco_train2017"
 
 train_dataset = COCOTrainDataset(data_path=train_folder, transform=transforms.Compose([
     transforms.Resize((256, 256)),
