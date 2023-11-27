@@ -1,4 +1,4 @@
-# BeyondAGrayscalePerception
+# BeyondAGrayscalePerception :paintbrush:
 ![](./example.jpeg)
 ## Installation
 
