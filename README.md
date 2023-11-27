@@ -61,4 +61,31 @@ Yu can find the individual scripts in the CIC directory
 | Beta    |/media/disk2/lvchaparro/AML/PROYECTO/NEWCOLOR/CODIGO FINAL/models/beta/betagammab.pt   | 
 | Beta (PL)    | /media/disk2/lgomez/COLORIZATION/models/modelbetap.pt   | 
 
+## Authors
+
+- [@Laura Chaparro](https://github.com/lauraveronicachaparro)
+- [@Lina Gomez](https://github.com/Lina-go)
+
+## Documentation
+
+[PowerPointPPT](https://uniandes-my.sharepoint.com/:p:/r/personal/l_gomez1_uniandes_edu_co/Documents/IX/AML/formato_avances_proyecto.pptx?d=w9e9c32d982d1490e949227adb7302e1e&csf=1&web=1&e=EyzJ9q)
+<br />[Overleaf](https://www.overleaf.com/6514587537bfwwpbyhptzg)
+
+## Acknowledgements
+The completion of this work was achieved by Lina
+Gomez and Laura Chaparro,
+Biomedical Engineering students at Universidad de los An-
+des. Both contributed extensively to various aspects of the
+project, including the execution of code, generation of vi-
+sualizations, writing of the article, and analysis of the re-
+sults. We would also like to express our gratitude to Pablo
+Arbealez, Christian Forigua, Camila Escobar, and Nicolas
+Aparicio for their significant reviews and guidance through-
+out the project. Their insightful feedback and mentorship
+greatly contributed to the refinement and success of our
+work.
+
+
+
+
 
